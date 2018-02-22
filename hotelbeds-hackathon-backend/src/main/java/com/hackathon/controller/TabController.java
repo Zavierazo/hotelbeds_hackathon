@@ -61,7 +61,7 @@ public class TabController {
 
         // Create a filter for the availability.
         ActivitySearchFilterItem destinationFilter = new ActivitySearchFilterItem();
-        destinationFilter.setType(ActivityFilterType.);
+        destinationFilter.setType(ActivityFilterType.COORDINATES_GPS);
         destinationFilter.setType(ActivityFilterType.DESTINATION_ID);
         destinationFilter.setValue("PMI");
         ActivitySearchFilterItemList filterList = new ActivitySearchFilterItemList();
