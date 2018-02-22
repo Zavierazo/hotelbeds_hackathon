@@ -34,6 +34,13 @@
             <version>0.13-SNAPSHOT</version>
         </dependency>
         <dependency>
+            <groupId>com.hotelbeds.tab.sdk</groupId>
+            <artifactId>tabsdk</artifactId>
+            <systemPath>${project.basedir}/lib/tabsdk-1.0.jar</systemPath>
+            <scope>system</scope>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
             <groupId>com.google.maps</groupId>
             <artifactId>google-maps-services</artifactId>
             <version>0.1.17</version>
@@ -231,6 +238,20 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/lib</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
