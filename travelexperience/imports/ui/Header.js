@@ -80,15 +80,6 @@ class Header extends Component {
               </div>
             </div>
           </div>
-          <div className="top-header-author">
-            <a href="02-ProfilePage.html" className="author-thumb">
-              <img src="img/author-main1.jpg" alt="author"/>
-            </a>
-            <div className="author-content">
-              <a href="02-ProfilePage.html" className="h4 author-name">James Spiegel</a>
-              <div className="country">San Francisco, CA</div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
