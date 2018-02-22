@@ -26,7 +26,6 @@ import com.hotelbeds.tab.sdk.model.pojo.ActivitySearchFilterItemList;
 import com.hotelbeds.tab.sdk.model.pojo.PaginationRequest;
 import com.hotelbeds.tab.sdk.model.request.ActivitySearchRequest;
 import com.hotelbeds.tab.sdk.model.response.ActivitySearchResponse;
-import com.hotelbeds.tab.sdk.model.utils.Enum;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -41,9 +40,8 @@ public class TabController {
 
     @PostConstruct
     public void init() {
-        tabActivitiesClient = new TabActivitiesClient(
-            API_KEY, SECRET, 50,
-            120, Enum.TABEnvironment.TABEnvironmnetTest);
+        //        tabActivitiesClient = new TabActivitiesClient(
+        //            API_KEY, SECRET, 50, 120, Enum.TABEnvironment.TABEnvironmnetTest);
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/avail", produces = {
