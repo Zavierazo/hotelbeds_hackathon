@@ -7,25 +7,25 @@ import Join from './Join';
 class Experiencers extends Component {
 
 	images(img) {
-		let images1 = [{img: 'img/experiencers/thailand6.jpg', name: 'Tess Christine'},
-						{img: 'img/experiencers/thailand9.jpg',name: 'Kay'},
-						{img: 'img/experiencers/thailand5.jpg', name: 'Kay'}];
+		let images1 = [{img: 'img/experiencers/thailand_tess.jpg', name: 'Tess Christine'},
+						{img: 'img/experiencers/thailand9.jpg',name: 'Jon Olsson'},
+						{img: 'img/experiencers/thailand5.jpg', name: 'Jeremih Endir'}];
 
-		let images2 = [{img: 'img/experiencers/thailand2.jpg', name: ''},
-						{img: 'img/experiencers/thailand1.jpg', name: ''},
-						{img: 'img/experiencers/thailand4.jpg', name: ''}];
+		let images2 = [{img: 'img/experiencers/thailand2.jpg', name: 'Jay Alvarez'},
+						{img: 'img/experiencers/thailand_katy.jpg', name: 'KatytheChic'},
+						{img: 'img/experiencers/thailand1.jpg', name: 'Luisito Comunica'}];
 
-		let images3 = [{img:'img/experiencers/thailand8.jpg',name: ''},
-						{img:'img/experiencers/thailand7.jpg',name: ''},
-						{img:'img/experiencers/thailand3.jpg', name: ''}];
+		let images3 = [{img:'img/experiencers/thailand4.jpg',name: 'Alexis Olivar'},
+						{img:'img/experiencers/thailand7.jpg',name: 'Hector Vidrieira'},
+						{img:'img/experiencers/thailand3.jpg', name: 'Isabelle Pullen'}];
 
-		let images4 = [{img:'img/experiencers/thailand10.jpg',name: ''},
-						{img:'img/experiencers/thailand10.jpg',name: ''},
-						{img:'img/experiencers/thailand10.jpg', name: ''}];
+		let images4 = [{img:'img/experiencers/thailand6.jpg',name: 'John Kirk'},
+						{img:'img/experiencers/thailand8.jpg',name: 'Aylin Meng'},
+						{img:'img/experiencers/thailand10.jpg', name: 'Jake & Elsa'}];
 						
-		let images5 = [{img:'img/experiencers/thailand11.jpg',name: ''},
-						{img:'img/experiencers/thailand11.jpg',name: ''},
-						{img:'img/experiencers/thailand11.jpg', name: ''}];
+		let images5 = [{img:'img/experiencers/thailand11.jpg',name: 'Christopher Kay'},
+						{img:'img/experiencers/thailand11.jpg',name: 'Tracy Mcsheen'},
+						{img:'img/experiencers/thailand11.jpg', name: 'Iker García'}];
 
 		if (img === 0) {
 			return images1;
