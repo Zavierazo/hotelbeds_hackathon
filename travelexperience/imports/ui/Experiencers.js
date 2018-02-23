@@ -94,13 +94,15 @@ class Experiencers extends Component {
 					<div className="ui-block">
 						<div className="friend-item">
 		                    <img src={imgObj.img} alt="photo" />
-		                    <div className="overlay overlay-dark"></div>
-		                    <a href="https://www.instagram.com/tesschristinexo" className="  full-block"></a>
 		                    <div className="content" style={{padding: 8+'px'}}>
 		                    	<div className="ui-block video-item">
 		                      <a href="#" className="h6 title">{imgObj.name}</a>
-		                      	<a href="https://www.instagram.com/tesschristinexo"><img style={{width:40+'px'}} src="img/insta.png" alt="instagram"/></a>
-		                      	<a href="https://www.youtube.com/watch?v=MV0bL-jdVws"><img style={{width:40+'px'}} src="img/youtube.png" alt="youtube"/></a>
+		                      	<a href="https://www.instagram.com/tesschristinexo">
+		                      		<img style={{width:40+'px'}} src="img/insta.png" alt="instagram"/>
+		                      	</a>
+		                      	<a href="https://www.youtube.com/watch?v=MV0bL-jdVws">
+		                      		<img style={{width:40+'px'}} src="img/youtube.png" alt="youtube"/>
+		                      	</a>
 		                      </div>
 		                    </div>
 						</div>
