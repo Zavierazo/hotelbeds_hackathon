@@ -6,7 +6,7 @@ class Experiencers extends Component {
 
 	buy(e) {
 		if (e) e.preventDefault();
-		FlowRouter.go('/buy');
+		FlowRouter.go('/buy?checkin=2018-03-25&checkout=2018-03-30&adults=2');
 	}
 
   render() {
