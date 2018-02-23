@@ -103,9 +103,9 @@ class Experiencers extends Component {
 		                    <a href="#" data-toggle="modal" data-target="#open-photo-popup-v2" className="  full-block"></a>
 		                    <div className="content">
 		                    	<div className="ui-block video-item">
-		                      <a href="#" className="h6 title">Header Photos</a>
+		                      <a href="#" className="h6 title">KatyTheChic</a>
 		                      	<a href="https://www.instagram.com/wolfiecindy/?hl=es"><img style={{width:40+'px'}} src="img/insta.png" alt="instagram"/></a>
-		                      	<a href="https://www.youtube.com/watch?v=RcmrbNRK-jY"><img style={{width:40+'px'}} src="img/youtube.png" alt="youtube"/></a>
+		                      	<a href="https://www.youtube.com/watch?v=mbW2JAMLH7g"><img style={{width:40+'px'}} src="img/youtube.png" alt="youtube"/></a>
 		                      </div>
 		                    </div>
 						</div>

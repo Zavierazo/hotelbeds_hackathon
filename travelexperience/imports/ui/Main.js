@@ -226,7 +226,7 @@ class Main extends Component {
                       </div>
                     
                       <div className="content">
-                        <a href="#" className="title h5">Surfing the Atlantic</a>
+                        <a href="#" className="title h5">Tailandia Hangover</a>
                         <div className="rating_photo" >
                           <img src="img/5stars.png" alt="photo" />                          
                         </div>
