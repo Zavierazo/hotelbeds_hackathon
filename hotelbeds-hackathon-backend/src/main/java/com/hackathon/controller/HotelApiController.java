@@ -14,6 +14,7 @@ import java.util.stream.Collectors;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -52,6 +53,7 @@ public class HotelApiController {
     @Data
     @JsonInclude(value = JsonInclude.Include.NON_NULL)
     public static class AvailData {
+        private Integer index;
         private String hotelName;
         private String image;
         private List<String> images;
@@ -61,6 +63,8 @@ public class HotelApiController {
         private String rateKey;
     }
 
+    @CrossOrigin(origins = {"*"
+    })
     @RequestMapping(method = RequestMethod.GET, value = "/avail", produces = {
         MediaType.APPLICATION_JSON_VALUE
     })
@@ -95,7 +99,7 @@ public class HotelApiController {
             log.debug("Requesting availability... {}", LoggingRequestInterceptor.writeJSON(rq.toAvailabilityRQ()));
             AvailabilityRS availabilityRS = apiClient.availability(rq);
             log.debug("AvailabilityRS: {}", LoggingRequestInterceptor.writeJSON(availabilityRS));
-
+            int index = 0;
             com.hotelbeds.hotelcontentapi.auto.messages.Hotel hotelDetail = apiClient.getHotel(hotelCode, "ENG", false);
             if (availabilityRS != null && availabilityRS.getHotels() != null && availabilityRS.getHotels().getHotels() != null) {
                 for (Hotel hotel : availabilityRS.getHotels().getHotels()) {
@@ -106,6 +110,7 @@ public class HotelApiController {
                                     if (rate.getRateType() == SimpleTypes.RateType.BOOKABLE) {
                                         BigDecimal price = rate.getSellingRate() != null ? rate.getSellingRate() : rate.getNet();
                                         AvailData availData = new AvailData();
+                                        availData.setIndex(index++);
                                         availData.setHotelName(hotel.getName() + " " + hotel.getCategoryName());
                                         Optional<com.hotelbeds.hotelcontentapi.auto.messages.Image> image =
                                             hotelDetail.getImages().stream().filter(imageBean -> "GEN".equals(imageBean.getType().getCode()))
@@ -152,6 +157,8 @@ public class HotelApiController {
         private String bookingId;
     }
 
+    @CrossOrigin(origins = {"*"
+    })
     @RequestMapping(method = RequestMethod.GET, value = "/book", produces = {
         MediaType.APPLICATION_JSON_VALUE
     })
