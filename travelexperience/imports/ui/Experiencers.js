@@ -40,11 +40,6 @@ class Experiencers extends Component {
 		}
 	}
 
-	buy(e) {
-		if (e) e.preventDefault();
-		FlowRouter.go('/buy?checkin=2018-03-25&checkout=2018-03-30&adults=2');
-	}
-
 	renderExperiences() {
 		let i = 0;
 		let experiencers1 = this.images(0).map((img) => (
@@ -97,7 +92,7 @@ class Experiencers extends Component {
 		let mainView = 
 				<div key={idx} className="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-6">
 					<div className="ui-block">
-						<div className="friend-item" onClick={this.buy}>
+						<div className="friend-item">
 		                    <img src={img} alt="photo" />
 		                    <div className="overlay overlay-dark"></div>
 		                    <a href="#" className="more"><svg className="olymp-three-dots-icon" dangerouslySetInnerHTML={{__html: threeDots }} /></a>
@@ -109,7 +104,8 @@ class Experiencers extends Component {
 		                    <div className="content">
 		                    	<div className="ui-block video-item">
 		                      <a href="#" className="h6 title">Header Photos</a>
-		                      <time className="published" dateTime="2017-03-24T18:18">1 week ago</time>
+		                      	<a href="https://www.instagram.com/wolfiecindy/?hl=es"><img style={{width:40+'px'}} src="img/insta.png" alt="instagram"/></a>
+		                      	<a href="https://www.youtube.com/watch?v=RcmrbNRK-jY"><img style={{width:40+'px'}} src="img/youtube.png" alt="youtube"/></a>
 		                      </div>
 		                    </div>
 						</div>
