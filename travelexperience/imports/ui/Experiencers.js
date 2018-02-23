@@ -12,7 +12,7 @@ class Experiencers extends Component {
 						{img: 'img/experiencers/thailand5.jpg', name: 'Jeremih Endir'}];
 
 		let images2 = [{img: 'img/experiencers/thailand2.jpg', name: 'Jay Alvarez'},
-						{img: 'img/experiencers/thailand_katy.jpg', name: 'KatytheChic'},
+						{img: 'img/experiencers/thailand_katy.png', name: 'KatytheChic'},
 						{img: 'img/experiencers/thailand1.jpg', name: 'Luisito Comunica'}];
 
 		let images3 = [{img:'img/experiencers/thailand4.jpg',name: 'Alexis Olivar'},

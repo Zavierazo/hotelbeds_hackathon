@@ -215,7 +215,7 @@ class Main extends Component {
                     
                     <div className="photo-album-item" data-mh="album-item">
                       <div className="photo-item" onClick={this.experience}>
-                        <img src="img/photo-item2.jpg" alt="photo" />
+                        <img src="img/photo-thailand.jpg" alt="photo" />
                         <div className="overlay overlay-dark"></div>
                         <a href="#" className="more"><svg className="olymp-three-dots-icon" dangerouslySetInnerHTML={{__html: threeDots }} /></a>
                         <a href="#" className="post-add-icon">
