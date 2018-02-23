@@ -37,6 +37,11 @@ class Buy extends Component {
             });
     }
 
+    pay(e){
+        if (e) e.preventDefault();
+        window.open('https://commerce.coinbase.com/checkout/2aad86e4-c40b-46e6-a37f-a649fabc3a44','_blank');
+    }
+
 
     change(e, rateKey) {
         if (e) e.preventDefault();
@@ -120,10 +125,10 @@ class Buy extends Component {
         if (this.state.scheduler) {
             html =
                 <>
-                    <div class="today-events-thumb">
-                        <div class="date">
-                            <div class="day-number">{this.state.scheduler.day}</div>
-                            <div class="day-week">{this.state.scheduler.month}</div>
+                    <div className="today-events-thumb">
+                        <div className="date">
+                            <div className="day-number">{this.state.scheduler.day}</div>
+                            <div className="day-week">{this.state.scheduler.month}</div>
                         </div>
                     </div>
                 </>;
@@ -136,13 +141,13 @@ class Buy extends Component {
         if (this.state.scheduler) {
             html = this.state.scheduler.days.map((day) => (
                 <>
-                    <div class="card">
-                        <div class="card-header" role="tab" id="headingTwo-1">
-                            <div class="event-time">
+                    <div className="card">
+                        <div className="card-header" role="tab" id="headingTwo-1">
+                            <div className="event-time">
                                 <time datetime="2004-07-24T18:18">{day.day} <span
                                     style={{color: 'green'}}>{day.price}€</span></time>
-                                <div class="more">
-                                    <ul class="more-dropdown">
+                                <div className="more">
+                                    <ul className="more-dropdown">
                                         <li>
                                             <a href="#">Mark as Completed</a>
                                         </li>
@@ -152,26 +157,26 @@ class Buy extends Component {
                                     </ul>
                                 </div>
                             </div>
-                            <h5 class="mb-0 title">
+                            <h5 className="mb-0 title">
                                 <a data-toggle="collapse" data-parent="#accordion"
                                    href={'#collapse' + day.day} aria-expanded="false"
-                                   aria-controls="collapseTwo-1" class="collapsed">
+                                   aria-controls="collapseTwo-1" className="collapsed">
                                     {day.title}
-                                    <svg class="svg-inline--fa fa-angle-down fa-w-10" aria-hidden="true"
+                                    <svg className="svg-inline--fa fa-angle-down fa-w-10" aria-hidden="true"
                                          data-prefix="fa" data-icon="angle-down" role="img"
                                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg="">
                                         <path fill="currentColor"
                                               d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"></path>
                                     </svg>
-                                    <span class="event-status-icon completed" data-toggle="tooltip"
+                                    <span className="event-status-icon completed" data-toggle="tooltip"
                                           data-placement="top" data-original-title="COMPLETED">
 																			</span>
                                 </a>
                             </h5>
                         </div>
-                        <div id={'collapse' + day.day} class="collapse" role="tabpanel"
+                        <div id={'collapse' + day.day} className="collapse" role="tabpanel"
                              aria-labelledby="headingTwo-1">
-                            <div class="card-body">
+                            <div className="card-body">
                                 {day.description}
                             </div>
                         </div>
@@ -186,7 +191,8 @@ class Buy extends Component {
         let threeDots = '<use xlink:href="svg-icons/sprites/icons.svg#olymp-three-dots-icon"></use>'
         let arrow = '<use  xlink:href="svg-icons/sprites/icons.svg#olymp-dropdown-arrow-icon"></use>'
         let place = '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#olymp-add-a-place-icon"></use>'
-        let mainView = <div className="container">
+        let mainView = 
+        <div className="container">
                 <div className="row">
 
 
@@ -238,11 +244,8 @@ class Buy extends Component {
 
                                         {this.renderPrice()}
 
-                                        <button className="btn btn-secondary btn-lg full-width">Pay with Credit Card
-                                        </button>
-
-                                        <button className="btn btn-primary btn-lg full-width">Pay with Crypto Coin
-                                        </button>
+                                        <button className="btn btn-secondary btn-lg full-width">Pay with Credit Card</button>
+                                        <input type="button" className="btn btn-primary btn-lg full-width"  onClick={(e) => this.pay(e)} value="Pay with Crypto Coin" />
 
                                     </div>
                                 </form>
@@ -259,10 +262,10 @@ class Buy extends Component {
                                 <div className="ui-block-title ui-block-title-small">
                                     <h6 className="title" style={{fontSize: 15 + 'px'}}>Planning</h6>
                                 </div>
-                                <div class="today-events calendar">
+                                <div className="today-events calendar">
                                     {this.renderScheduler()}
-                                    <div class="list">
-                                        <div id="accordion-1" role="tablist" aria-multiselectable="true" class="day-event"
+                                    <div className="list">
+                                        <div id="accordion-1" role="tablist" aria-multiselectable="true" className="day-event"
                                              data-month="12" data-day="2">
                                             {this.renderSchedulers()}
                                         </div>
