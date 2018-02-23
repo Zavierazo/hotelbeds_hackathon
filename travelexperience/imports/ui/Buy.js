@@ -277,13 +277,13 @@ class Buy extends Component {
                                         </div>
 
                                         <div className="form-group label-floating full-width">
-                                            <label className="control-label">Your Email</label>
-                                            <input className="form-control" placeholder="Your email" type="email"/>
+                                            <label className="control-label">Last Name</label>
+                                            <input className="form-control" placeholder="Your last name" type="text"/>
                                         </div>
 
                                         <div className="form-group label-floating full-width">
-                                            <label className="control-label">Last Name</label>
-                                            <input className="form-control" placeholder="Your last name" type="text"/>
+                                            <label className="control-label">Your Email</label>
+                                            <input className="form-control" placeholder="Your email" type="email"/>
                                         </div>
 
                                         <div className="form-group label-floating full-width">

@@ -92,6 +92,14 @@ public class HotelApiController {
             if (ChronoUnit.DAYS.between(checkIn, checkOut) > 30) {
                 checkOut = checkIn.plusDays(30);
             }
+            if (checkIn.isBefore(LocalDate.now())) {
+                long days = ChronoUnit.DAYS.between(checkIn, checkOut);
+                checkIn = LocalDate.now().plusDays(1);
+                checkOut = checkIn.plusDays(days);
+            }
+            if (checkOut.isBefore(LocalDate.now())) {
+                checkOut = checkIn.plusDays(1);
+            }
             if (checkIn.isAfter(checkOut)) {
                 LocalDate temp = checkIn;
                 checkIn = checkOut;

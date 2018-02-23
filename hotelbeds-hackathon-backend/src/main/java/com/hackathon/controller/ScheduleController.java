@@ -56,10 +56,21 @@ public class ScheduleController {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        if (ChronoUnit.DAYS.between(checkIn, checkOut) > 30) {
+            checkOut = checkIn.plusDays(30);
+        }
         if (checkIn.isAfter(checkOut)) {
             LocalDate temp = checkIn;
             checkIn = checkOut;
             checkOut = temp;
+        }
+        if (checkIn.isBefore(LocalDate.now())) {
+            long days = ChronoUnit.DAYS.between(checkIn, checkOut);
+            checkIn = LocalDate.now().plusDays(1);
+            checkOut = checkIn.plusDays(days);
+        }
+        if (checkOut.isBefore(LocalDate.now())) {
+            checkOut = checkIn.plusDays(1);
         }
         if (checkIn.isEqual(checkOut)) {
             checkOut = checkIn.plusDays(1);
