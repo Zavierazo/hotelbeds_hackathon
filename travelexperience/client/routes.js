@@ -6,6 +6,7 @@ import { mount, withOptions } from 'react-mounter';
 import App from '../imports/ui/App';
 import Main from '../imports/ui/Main';
 import Experiencers from '../imports/ui/Experiencers';
+import Buy from '../imports/ui/Buy';
 
 const mountWithOpts = withOptions({ rootId: 'render-main' }, mount);
 
@@ -28,12 +29,12 @@ FlowRouter.route('/experiencers', {
     },
 });
 
-/*
+
 FlowRouter.route('/buy', {
     name: 'Buy.show',
     action() {
-        mountWithOpts(Buy, {
+        mountWithOpts(App, {
             main: <Buy key="BuyView"/>,
         });
     },
-});*/
+});
