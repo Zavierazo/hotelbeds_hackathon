@@ -7,7 +7,7 @@ import Join from './Join';
 class Experiencers extends Component {
 
 	images(img) {
-		let images1 = [{img: 'img/experiencers/thailand_tess.jpg', name: 'Tess Christine'},
+		let images1 = [{img: 'img/experiencers/thailand_tess.png', name: 'Tess Christine'},
 						{img: 'img/experiencers/thailand9.jpg',name: 'Jon Olsson'},
 						{img: 'img/experiencers/thailand5.jpg', name: 'Jeremih Endir'}];
 
