@@ -56,6 +56,11 @@ public class ScheduleController {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        if (checkIn.isAfter(checkOut)) {
+            LocalDate temp = checkIn;
+            checkIn = checkOut;
+            checkOut = temp;
+        }
         ScheduleResponse response = new ScheduleResponse();
         response.setDay(checkIn.getDayOfMonth() + "-" + checkOut.getDayOfMonth());
         response.setMonth(checkIn.getMonth().getDisplayName(TextStyle.FULL, Locale.ENGLISH) + ", " + checkIn.getYear());

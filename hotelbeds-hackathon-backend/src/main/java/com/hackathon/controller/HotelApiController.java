@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -87,6 +88,14 @@ public class HotelApiController {
                 for (int count = 0; count < childrens; count++) {
                     availRoom.childOf(Integer.parseInt(childAges[count]));
                 }
+            }
+            if (ChronoUnit.DAYS.between(checkIn, checkOut) > 30) {
+                checkOut = checkIn.plusDays(30);
+            }
+            if (checkIn.isAfter(checkOut)) {
+                LocalDate temp = checkIn;
+                checkIn = checkOut;
+                checkOut = temp;
             }
             Availability rq = Availability.builder()
                 .language("ENG")
