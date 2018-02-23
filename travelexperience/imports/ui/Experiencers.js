@@ -95,7 +95,7 @@ class Experiencers extends Component {
 						<div className="friend-item">
 		                    <img src={imgObj.img} alt="photo" />
 		                    <div className="overlay overlay-dark"></div>
-		                    <a href="https://www.instagram.com/tesschristinexo" data-toggle="modal" data-target="#open-photo-popup-v2" className="  full-block"></a>
+		                    <a href="https://www.instagram.com/tesschristinexo" className="  full-block"></a>
 		                    <div className="content" style={{padding: 8+'px'}}>
 		                    	<div className="ui-block video-item">
 		                      <a href="#" className="h6 title">{imgObj.name}</a>
