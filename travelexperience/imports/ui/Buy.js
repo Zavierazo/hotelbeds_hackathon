@@ -7,13 +7,20 @@ class Buy extends Component {
     constructor(props) {
         super(props);
         console.log(props);
-        this.state = {hotel: undefined, selected: '', scheduler: undefined};
-        this.getHotel().then();
-        this.getSchedule().then();
+        this.state = {
+            hotel: undefined,
+            selected: '',
+            scheduler: undefined,
+            checkIn: props.params.checkin,
+            checkOut: props.params.checkout
+        };
+        this.getHotel(props.params.checkin, props.params.checkout).then();
+        this.getSchedule(props.params.checkin, props.params.checkout).then();
+        this.handleChange = this.handleChange.bind(this);
     }
 
-    async getSchedule() {
-        const url = 'http://10.175.56.57:8080/schedule/list?checkIn=' + this.props.params.checkin + '&checkOut=' + this.props.params.checkout;
+    async getSchedule(checkIn, checkOut) {
+        const url = 'http://10.175.56.57:8080/schedule/list?checkIn=' + checkIn + '&checkOut=' + checkOut;
         axios.get(url)
             .then(response => {
                 console.log(response);
@@ -24,8 +31,28 @@ class Buy extends Component {
             });
     }
 
-    async getHotel() {
-        const url = 'http://10.175.56.57:8080/hotel/avail?hotelCode=169828&adults=' + this.props.params.adults + '&childrens=0&checkIn=' + this.props.params.checkin + '&checkOut=' + this.props.params.checkout;
+    handleChange(e, id) {
+        if (e) e.preventDefault();
+        if (id === 1) {
+            console.log(id + " " + e.target.value);
+            this.setState({checkIn: e.target.value});
+            if (e.target.value.length === 10 && this.state.checkOut.length === 10) {
+                this.getHotel(e.target.value, this.state.checkOut).then();
+                this.getSchedule(e.target.value, this.state.checkOut).then();
+            }
+        } else {
+            console.log(id + " " + e.target.value);
+            this.setState({checkOut: e.target.value});
+            if (this.state.checkIn.length === 10 && e.target.value.length === 10) {
+                this.getHotel(this.state.checkIn, e.target.value).then();
+                this.getSchedule(this.state.checkIn, e.target.value).then();
+            }
+        }
+
+    }
+
+    async getHotel(checkIn, checkOut) {
+        const url = 'http://10.175.56.57:8080/hotel/avail?hotelCode=169828&adults=' + this.props.params.adults + '&childrens=0&checkIn=' + checkIn + '&checkOut=' + checkOut;
         axios.get(url)
             .then(response => {
                 console.log(response);
@@ -37,6 +64,10 @@ class Buy extends Component {
             });
     }
 
+
+    // shouldComponentUpdate(nextProps, nextState) {
+    //     return true;
+    // }
 
     change(e, rateKey) {
         if (e) e.preventDefault();
@@ -55,7 +86,9 @@ class Buy extends Component {
                 }
             }
             for (let i = 0; i < this.state.scheduler.days.length; i++) {
-                totalPrice = totalPrice.plus(new BigNumber(this.state.scheduler.days[i].price));
+                if (this.state.scheduler.days[i] && this.state.scheduler.days[i].price) {
+                    totalPrice = totalPrice.plus(new BigNumber(this.state.scheduler.days[i].price));
+                }
             }
 
             price =
@@ -183,9 +216,7 @@ class Buy extends Component {
     }
 
     render() {
-        let threeDots = '<use xlink:href="svg-icons/sprites/icons.svg#olymp-three-dots-icon"></use>'
-        let arrow = '<use  xlink:href="svg-icons/sprites/icons.svg#olymp-dropdown-arrow-icon"></use>'
-        let place = '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#olymp-add-a-place-icon"></use>'
+        let calendar = '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="svg-icons/sprites/icons.svg#olymp-month-calendar-icon"></use>'
         let mainView = <div className="container">
                 <div className="row">
 
@@ -215,6 +246,25 @@ class Buy extends Component {
                             <div className="ui-block-content">
                                 <form>
                                     <div className="row">
+
+                                        <div class="form-group date-time-picker label-floating" style={{width: 50 + '%'}}>
+                                            <label class="control-label">Check-In</label>
+                                            <input name="checkIn" value={this.state.checkIn}
+                                                   onChange={(e) => this.handleChange(e, 1)}/>
+                                            <span class="input-group-addon">
+															<svg class="olymp-month-calendar-icon icon"
+                                                                 dangerouslySetInnerHTML={{__html: calendar}}/>
+														</span>
+                                        </div>
+                                        <div class="form-group date-time-picker label-floating" style={{width: 50 + '%'}}>
+                                            <label class="control-label">Check-Out</label>
+                                            <input name="checkOut" value={this.state.checkOut}
+                                                   onChange={(e) => this.handleChange(e, 2)}/>
+                                            <span class="input-group-addon">
+															<svg class="olymp-month-calendar-icon icon"
+                                                                 dangerouslySetInnerHTML={{__html: calendar}}/>
+														</span>
+                                        </div>
 
                                         <div className="form-group label-floating full-width">
                                             <label className="control-label">First Name</label>
