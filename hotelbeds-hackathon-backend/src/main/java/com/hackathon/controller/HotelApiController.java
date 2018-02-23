@@ -97,6 +97,9 @@ public class HotelApiController {
                 checkIn = checkOut;
                 checkOut = temp;
             }
+            if (checkIn.isEqual(checkOut)) {
+                checkOut = checkIn.plusDays(1);
+            }
             Availability rq = Availability.builder()
                 .language("ENG")
                 .checkIn(checkIn)

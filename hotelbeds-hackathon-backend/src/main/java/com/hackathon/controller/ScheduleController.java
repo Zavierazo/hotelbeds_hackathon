@@ -61,6 +61,9 @@ public class ScheduleController {
             checkIn = checkOut;
             checkOut = temp;
         }
+        if (checkIn.isEqual(checkOut)) {
+            checkOut = checkIn.plusDays(1);
+        }
         ScheduleResponse response = new ScheduleResponse();
         response.setDay(checkIn.getDayOfMonth() + "-" + checkOut.getDayOfMonth());
         response.setMonth(checkIn.getMonth().getDisplayName(TextStyle.FULL, Locale.ENGLISH) + ", " + checkIn.getYear());

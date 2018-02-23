@@ -287,8 +287,8 @@ class Buy extends Component {
                                         </div>
 
                                         <div className="form-group label-floating full-width">
-                                            <label className="control-label">Your Phone Number</label>
-                                            <input className="form-control" placeholder="" type="phone" value="+34"/>
+                                            <label className="control-label">Phone Number</label>
+                                            <input className="form-control" placeholder="+34" type="phone"/>
                                         </div>
 
                                         {this.renderPrice()}
