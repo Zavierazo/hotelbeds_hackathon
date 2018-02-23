@@ -93,7 +93,7 @@ class Experiencers extends Component {
 				<div key={idx} className="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-6">
 					<div className="ui-block">
 						<div className="friend-item">
-		                    <img src={imgObj.img} alt="photo" />
+		                    <img src={imgObj.img} alt="photo" style={{height:250+'px'}}/>
 		                    <div className="content" style={{padding: 8+'px'}}>
 		                    	<div className="ui-block video-item">
 		                      <a href="#" className="h6 title">{imgObj.name}</a>
