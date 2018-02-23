@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import {FormatNumber} from "./Ford";
+import BigNumber from 'bignumber.js'
 
 class Buy extends Component {
     constructor(props) {
@@ -43,6 +45,28 @@ class Buy extends Component {
         }
     }
 
+    renderPrice() {
+        let price = null;
+        if (this.state.hotel && this.state.scheduler) {
+            let totalPrice = new BigNumber(0);
+            for (let i = 0; i < this.state.hotel.length; i++) {
+                if (this.state.hotel[i].rateKey === this.state.selected) {
+                    totalPrice = totalPrice.plus(new BigNumber(this.state.hotel[i].price));
+                }
+            }
+            for (let i = 0; i < this.state.scheduler.days.length; i++) {
+                totalPrice = totalPrice.plus(new BigNumber(this.state.scheduler.days[i].price));
+            }
+
+            price =
+                <>
+                    <h1 style={{color: 'green'}}>{FormatNumber(totalPrice)} €</h1>
+                </>
+
+        }
+        return price;
+    }
+
     renderHotels() {
         let hotels = null;
         if (this.state.hotel) {
@@ -67,7 +91,12 @@ class Buy extends Component {
     }
 
     renderHotel() {
-        let html = null;
+        let html =
+            <>
+                <div className="ui-block-title ui-block-title-small">
+                    <h6 className="title" style={{fontSize: 15 + 'px'}}>HOTEL</h6>
+                </div>
+            </>;
         if (this.state.hotel) {
             let hotel = this.state.hotel[0];
             html =
@@ -207,6 +236,8 @@ class Buy extends Component {
                                             <input className="form-control" placeholder="" type="phone" value="+34"/>
                                         </div>
 
+                                        {this.renderPrice()}
+
                                         <button className="btn btn-secondary btn-lg full-width">Pay with Credit Card
                                         </button>
 
@@ -226,7 +257,7 @@ class Buy extends Component {
 
                             <div className="your-profile">
                                 <div className="ui-block-title ui-block-title-small">
-                                    <h6 className="title" style={{fontSize: 15 + 'px'}}>Schedule</h6>
+                                    <h6 className="title" style={{fontSize: 15 + 'px'}}>Planning</h6>
                                 </div>
                                 <div class="today-events calendar">
                                     {this.renderScheduler()}
