@@ -7,25 +7,25 @@ import Join from './Join';
 class Experiencers extends Component {
 
 	images(img) {
-		let images1 = ['img/experiencers/thailand1.jpg',
-						'img/experiencers/26276479_2004236043178045_2994516379194884096_n.jpg',
-						'img/experiencers/26302984_166527160742210_8448820658351112192_n.jpg'];
+		let images1 = ['img/experiencers/thailand6.jpg',
+						'img/experiencers/thailand9.jpg',
+						'img/experiencers/thailand5.jpg'];
 
-		let images2 = ['img/experiencers/26302984_166527160742210_8448820658351112192_n.jpg',
-						'img/experiencers/26863319_2001551230100442_7540758928666132480_n.jpg',
-						'img/experiencers/27580291_180416365904613_6933595211805229056_n.jpg'];
+		let images2 = ['img/experiencers/thailand2.jpg',
+						'img/experiencers/thailand1.jpg',
+						'img/experiencers/thailand4.jpg'];
 
-		let images3 = ['img/experiencers/27580291_180416365904613_6933595211805229056_n.jpg',
-						'img/experiencers/27580291_180416365904613_6933595211805229056_n.jpg',
-						'img/experiencers/26863319_2001551230100442_7540758928666132480_n.jpg'];
+		let images3 = ['img/experiencers/thailand8.jpg',
+						'img/experiencers/thailand7.jpg',
+						'img/experiencers/thailand3.jpg'];
 
-		let images4 = ['img/experiencers/27580291_180416365904613_6933595211805229056_n.jpg',
-						'img/experiencers/27580291_180416365904613_6933595211805229056_n.jpg',
-						'img/experiencers/27580291_180416365904613_6933595211805229056_n.jpg'];
+		let images4 = ['img/experiencers/thailand10.jpg',
+						'img/experiencers/thailand10.jpg',
+						'img/experiencers/thailand10.jpg'];
 						
-		let images5 = ['img/experiencers/26863319_2001551230100442_7540758928666132480_n.jpg',
-						'img/experiencers/27580291_180416365904613_6933595211805229056_n.jpg',
-						'img/experiencers/27580291_180416365904613_6933595211805229056_n.jpg'];
+		let images5 = ['img/experiencers/thailand11.jpg',
+						'img/experiencers/thailand11.jpg',
+						'img/experiencers/thailand11.jpg'];
 
 		if (img === 0) {
 			return images1;
