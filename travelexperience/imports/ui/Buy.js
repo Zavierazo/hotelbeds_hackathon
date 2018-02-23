@@ -64,6 +64,11 @@ class Buy extends Component {
             });
     }
 
+    pay(e){
+        if (e) e.preventDefault();
+        window.open('https://commerce.coinbase.com/checkout/2aad86e4-c40b-46e6-a37f-a649fabc3a44','_blank');
+    }
+
 
     // shouldComponentUpdate(nextProps, nextState) {
     //     return true;
@@ -291,8 +296,7 @@ class Buy extends Component {
                                         <button className="btn btn-secondary btn-lg full-width">Pay with Credit Card
                                         </button>
 
-                                        <button className="btn btn-primary btn-lg full-width">Pay with Crypto Coin
-                                        </button>
+                                        <input type="button" className="btn btn-primary btn-lg full-width"  onClick={(e) => this.pay(e)} value="Pay with Crypto Coin" />
 
                                     </div>
                                 </form>
