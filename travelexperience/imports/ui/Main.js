@@ -227,7 +227,7 @@ class Main extends Component {
                     
                       <div className="content">
                         <a href="#" className="title h5">Surfing the Atlantic</a>
-                        <span className="sub-title">Last Added: 2 hours ago</span>
+                        <span className="sub-title">Valoración</span>
                     
                         <div className="swiper-container">
                           <div className="swiper-wrapper">
@@ -304,7 +304,7 @@ class Main extends Component {
                     
                       <div className="content">
                         <a href="#" className="title h5">A white treasure</a>
-                        <span className="sub-title">Last Added: 2 hours ago</span>
+                        <span className="sub-title">Valoración</span>
                     
                         <div className="swiper-container">
                           <div className="swiper-wrapper">
@@ -381,7 +381,7 @@ class Main extends Component {
                     
                       <div className="content">
                         <a href="#" className="title h5">No stress, neither noise</a>
-                        <span className="sub-title">Last Added: 5 weeks ago</span>
+                        <span className="sub-title">Valoración</span>
                     
                         <div className="swiper-container" data-slide="fade">
                           <div className="swiper-wrapper">
@@ -458,7 +458,7 @@ class Main extends Component {
                     
                       <div className="content">
                         <a href="#" className="title h5">Caribbean Nap</a>
-                        <span className="sub-title">Last Added: 6 mins ago</span>
+                        <span className="sub-title">Valoración</span>
                     
                         <div className="swiper-container" data-slide="fade">
                           <div className="swiper-wrapper">
@@ -514,7 +514,7 @@ class Main extends Component {
                     
                       <div className="content">
                         <a href="#" className="title h5">Balloon trips</a>
-                        <span className="sub-title">Last Added: 16 hours ago</span>
+                        <span className="sub-title">Valoración</span>
                     
                         <div className="swiper-container" data-slide="fade">
                           <div className="swiper-wrapper">
@@ -587,8 +587,8 @@ class Main extends Component {
                       </div>
                     
                       <div className="content">
-                        <a href="#" className="title h5">Amazing Landscapes</a>
-                        <span className="sub-title">Last Added: 13 mins ago</span>
+                        <a href="#" className="title h5">Amazing Views</a>
+                        <span className="sub-title">Valoración</span>
                     
                         <div className="swiper-container" data-slide="fade">
                           <div className="swiper-wrapper">
@@ -689,7 +689,7 @@ class Main extends Component {
                     
                       <div className="content">
                         <a href="#" className="title h5">The Majestic Canyon</a>
-                        <span className="sub-title">Last Added: 57 mins ago</span>
+                        <span className="sub-title">Valoración</span>
                     
                         <div className="swiper-container" data-slide="fade">
                           <div className="swiper-wrapper">
@@ -747,7 +747,7 @@ class Main extends Component {
                     
                       <div className="content">
                         <a href="#" className="title h5">Winter 2015 Portraits</a>
-                        <span className="sub-title">Last Added: 1 year ago</span>
+                        <span className="sub-title">Valoración</span>
                     
                         <div className="swiper-container" data-slide="fade">
                           <div className="swiper-wrapper">

@@ -13,6 +13,7 @@ import javax.annotation.PostConstruct;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -46,6 +47,8 @@ public class TabController {
             API_KEY, SECRET, 50, 120, Enum.TABEnvironment.TABEnvironmnetTest);
     }
 
+    @CrossOrigin(origins = {"*"
+    })
     @RequestMapping(method = RequestMethod.GET, value = "/avail", produces = {
         MediaType.APPLICATION_JSON_VALUE
     })
