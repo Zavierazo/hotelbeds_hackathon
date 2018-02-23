@@ -7,7 +7,7 @@ class Header extends Component {
     let settings = '<use xlink:href="svg-icons/sprites/icons.svg#olymp-settings-icon"></use>'
     let threeDots = '<use xlink:href="svg-icons/sprites/icons.svg#olymp-three-dots-icon"></use>'
     let header = <div className="container">
-  <div class="header-spacer-small"></div>
+  <div className="header-spacer-small"></div>
   <div className="row">
     <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
       <div className="ui-block">

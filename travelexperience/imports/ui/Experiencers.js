@@ -7,25 +7,25 @@ import Join from './Join';
 class Experiencers extends Component {
 
 	images(img) {
-		let images1 = ['img/experiencers/thailand6.jpg',
-						'img/experiencers/thailand9.jpg',
-						'img/experiencers/thailand5.jpg'];
+		let images1 = [{img: 'img/experiencers/thailand6.jpg', name: 'Tess Christine'},
+						{img: 'img/experiencers/thailand9.jpg',name: 'Kay'},
+						{img: 'img/experiencers/thailand5.jpg', name: 'Kay'}];
 
-		let images2 = ['img/experiencers/thailand2.jpg',
-						'img/experiencers/thailand1.jpg',
-						'img/experiencers/thailand4.jpg'];
+		let images2 = [{img: 'img/experiencers/thailand2.jpg', name: ''},
+						{img: 'img/experiencers/thailand1.jpg', name: ''},
+						{img: 'img/experiencers/thailand4.jpg', name: ''}];
 
-		let images3 = ['img/experiencers/thailand8.jpg',
-						'img/experiencers/thailand7.jpg',
-						'img/experiencers/thailand3.jpg'];
+		let images3 = [{img:'img/experiencers/thailand8.jpg',name: ''},
+						{img:'img/experiencers/thailand7.jpg',name: ''},
+						{img:'img/experiencers/thailand3.jpg', name: ''}];
 
-		let images4 = ['img/experiencers/thailand10.jpg',
-						'img/experiencers/thailand10.jpg',
-						'img/experiencers/thailand10.jpg'];
+		let images4 = [{img:'img/experiencers/thailand10.jpg',name: ''},
+						{img:'img/experiencers/thailand10.jpg',name: ''},
+						{img:'img/experiencers/thailand10.jpg', name: ''}];
 						
-		let images5 = ['img/experiencers/thailand11.jpg',
-						'img/experiencers/thailand11.jpg',
-						'img/experiencers/thailand11.jpg'];
+		let images5 = [{img:'img/experiencers/thailand11.jpg',name: ''},
+						{img:'img/experiencers/thailand11.jpg',name: ''},
+						{img:'img/experiencers/thailand11.jpg', name: ''}];
 
 		if (img === 0) {
 			return images1;
@@ -85,7 +85,7 @@ class Experiencers extends Component {
 		return experiencersView;
 	}
 
-	renderExperience(img, idx) {
+	renderExperience(imgObj, idx) {
 		let heartIcon  = '<use xlink:href="svg-icons/sprites/icons.svg#olymp-heart-icon"></use>';
     	let threeDots = '<use xlink:href="svg-icons/sprites/icons.svg#olymp-three-dots-icon"></use>';
     	let plusIcon = '<use xlink:href="svg-icons/sprites/icons.svg#olymp-plus-icon"></use>';
@@ -93,17 +93,12 @@ class Experiencers extends Component {
 				<div key={idx} className="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-6">
 					<div className="ui-block">
 						<div className="friend-item">
-		                    <img src={img} alt="photo" />
+		                    <img src={imgObj.img} alt="photo" />
 		                    <div className="overlay overlay-dark"></div>
-		                    <a href="#" className="more"><svg className="olymp-three-dots-icon" dangerouslySetInnerHTML={{__html: threeDots }} /></a>
-		                    <a href="#" className="post-add-icon inline-items">
-		                      <svg className="olymp-heart-icon" dangerouslySetInnerHTML={{__html: heartIcon }} />
-		                      <span>15</span>
-		                    </a>
 		                    <a href="#" data-toggle="modal" data-target="#open-photo-popup-v2" className="  full-block"></a>
-		                    <div className="content">
+		                    <div className="content" style={{padding: 8+'px'}}>
 		                    	<div className="ui-block video-item">
-		                      <a href="#" className="h6 title">Tess Christine</a>
+		                      <a href="#" className="h6 title">{imgObj.name}</a>
 		                      	<a href="https://www.instagram.com/wolfiecindy/?hl=es"><img style={{width:40+'px'}} src="img/insta.png" alt="instagram"/></a>
 		                      	<a href="https://www.youtube.com/watch?v=MV0bL-jdVws"><img style={{width:40+'px'}} src="img/youtube.png" alt="youtube"/></a>
 		                      </div>
