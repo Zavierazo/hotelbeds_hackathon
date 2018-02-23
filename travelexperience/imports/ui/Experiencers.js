@@ -68,10 +68,10 @@ class Experiencers extends Component {
 		));
 
 		let experiencersView = <>
-			<Join />
 			<div className="container">
 				<div className="row">
 					{experiencers1}
+					<Join />
 				</div>
 				<div className="row">
 					{experiencers2}

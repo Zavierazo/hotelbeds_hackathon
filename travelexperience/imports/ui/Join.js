@@ -13,7 +13,7 @@ class Join extends Component {
 		let threeDots = '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="svg-icons/sprites/icons.svg#olymp-three-dots-icon"></use>'
 		let star = '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="svg-icons/sprites/icons.svg#olymp-star-icon"></use>';
 		let joinView = <>
-			<aside class="col-xl-3 order-xl-3 col-lg-6 order-lg-3 col-md-6 col-sm-12 col-xs-12" style={{float:'right'}}>
+			<div className="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-6">
 				<div className="ui-block">
 					
 					<div className="widget w-create-fav-page">
@@ -34,7 +34,7 @@ class Join extends Component {
 						</div>
 					</div>
 				</div>
-			</aside>
+			</div>
 		</>;
 
 	return (
