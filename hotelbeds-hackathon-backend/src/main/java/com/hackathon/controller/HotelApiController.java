@@ -53,8 +53,6 @@ public class HotelApiController {
     @Data
     @JsonInclude(value = JsonInclude.Include.NON_NULL)
     public static class AvailData {
-        private boolean cheaper;
-        private Integer index;
         private String hotelName;
         private String image;
         private List<String> images;
@@ -101,7 +99,6 @@ public class HotelApiController {
             log.debug("Requesting availability... {}", LoggingRequestInterceptor.writeJSON(rq.toAvailabilityRQ()));
             AvailabilityRS availabilityRS = apiClient.availability(rq);
             log.debug("AvailabilityRS: {}", LoggingRequestInterceptor.writeJSON(availabilityRS));
-            int index = 0;
             com.hotelbeds.hotelcontentapi.auto.messages.Hotel hotelDetail = apiClient.getHotel(hotelCode, "ENG", false);
             if (availabilityRS != null && availabilityRS.getHotels() != null && availabilityRS.getHotels().getHotels() != null) {
                 for (Hotel hotel : availabilityRS.getHotels().getHotels()) {
@@ -112,7 +109,6 @@ public class HotelApiController {
                                     if (rate.getRateType() == SimpleTypes.RateType.BOOKABLE) {
                                         BigDecimal price = rate.getSellingRate() != null ? rate.getSellingRate() : rate.getNet();
                                         AvailData availData = new AvailData();
-                                        availData.setIndex(index++);
                                         availData.setHotelName(hotel.getName() + " " + hotel.getCategoryName());
                                         Optional<com.hotelbeds.hotelcontentapi.auto.messages.Image> image =
                                             hotelDetail.getImages().stream().filter(imageBean -> "GEN".equals(imageBean.getType().getCode()))
@@ -149,15 +145,6 @@ public class HotelApiController {
                         }
                     }
                 }
-            }
-            AvailData cheaper = null;
-            for (AvailData availData : avail) {
-                if (cheaper == null || cheaper.getPrice().compareTo(availData.getPrice()) > 0) {
-                    cheaper = availData;
-                }
-            }
-            if (cheaper != null) {
-                cheaper.setCheaper(true);
             }
         } catch (Exception e) {
             log.error("Error doing availability", e);
