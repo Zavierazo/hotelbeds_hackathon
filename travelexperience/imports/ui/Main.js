@@ -228,7 +228,7 @@ class Main extends Component {
                       <div className="content">
                         <a href="#" className="title h5">Surfing the Atlantic</a>
                         <div className="rating_photo" >
-                          <img src="img/5stars.jpg" alt="photo" />                          
+                          <img src="img/5stars.png" alt="photo" />                          
                         </div>
                     
                         <div className="swiper-container">
