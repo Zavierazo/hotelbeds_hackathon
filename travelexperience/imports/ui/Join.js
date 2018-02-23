@@ -16,15 +16,7 @@ class Join extends Component {
 			<div className="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-6">
 				<div className="ui-block">
 					
-					<div className="widget w-create-fav-page">
-						<div className="icons-block">
-							<svg className="olymp-star-icon left-menu-icon" data-toggle="tooltip" data-placement="right" data-original-title="FAV PAGE" dangerouslySetInnerHTML={{__html: threeDots }} />
-					
-							<a href="#" className="more">
-								<svg className="olymp-three-dots-icon" dangerouslySetInnerHTML={{__html: threeDots }}/>
-							</a>
-						</div>
-					
+					<div className="widget w-create-fav-page">					
 						<div className="content">
 							<div className="author-thumb">
 								<img src="img/cindy.jpg" alt="photo" />
