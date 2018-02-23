@@ -7,6 +7,7 @@ class Header extends Component {
     let settings = '<use xlink:href="svg-icons/sprites/icons.svg#olymp-settings-icon"></use>'
     let threeDots = '<use xlink:href="svg-icons/sprites/icons.svg#olymp-three-dots-icon"></use>'
     let header = <div className="container">
+  <div class="header-spacer-small"></div>
   <div className="row">
     <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
       <div className="ui-block">
@@ -15,44 +16,6 @@ class Header extends Component {
             <img src="img/top-header1.jpg" alt="nature" />
           </div>
           <div className="profile-section">
-            <div className="row">
-              <div className="col-lg-5 col-md-5 ">
-                <ul className="profile-menu">
-                  <li>
-                    <a href="02-ProfilePage.html" className="active">Timeline</a>
-                  </li>
-                  <li>
-                    <a href="05-ProfilePage-About.html">About</a>
-                  </li>
-                  <li>
-                    <a href="06-ProfilePage.html">Friends</a>
-                  </li>
-                </ul>
-              </div>
-              <div className="col-lg-5 ml-auto col-md-5">
-                <ul className="profile-menu">
-                  <li>
-                    <a href="07-ProfilePage-Photos.html">Photos</a>
-                  </li>
-                  <li>
-                    <a href="09-ProfilePage-Videos.html">Videos</a>
-                  </li>
-                  <li>
-                    <div className="more">
-                      <svg className="olymp-three-dots-icon" dangerouslySetInnerHTML={{__html: threeDots }} />
-                      <ul className="more-dropdown more-with-triangle">
-                        <li>
-                          <a href="#">Report Profile</a>
-                        </li>
-                        <li>
-                          <a href="#">Block Profile</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
 
             <div className="control-block-button">
               <a href="35-YourAccount-FriendsRequests.html" className="btn btn-control bg-blue">
