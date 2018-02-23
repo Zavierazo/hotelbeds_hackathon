@@ -7,7 +7,7 @@ import Join from './Join';
 class Experiencers extends Component {
 
 	images(img) {
-		let images1 = ['img/experiencers/26187492_321709891668550_9123414266542555136_n.jpg',
+		let images1 = ['img/experiencers/thailand1.jpg',
 						'img/experiencers/26276479_2004236043178045_2994516379194884096_n.jpg',
 						'img/experiencers/26302984_166527160742210_8448820658351112192_n.jpg'];
 
@@ -103,9 +103,9 @@ class Experiencers extends Component {
 		                    <a href="#" data-toggle="modal" data-target="#open-photo-popup-v2" className="  full-block"></a>
 		                    <div className="content">
 		                    	<div className="ui-block video-item">
-		                      <a href="#" className="h6 title">KatyTheChic</a>
+		                      <a href="#" className="h6 title">Tess Christine</a>
 		                      	<a href="https://www.instagram.com/wolfiecindy/?hl=es"><img style={{width:40+'px'}} src="img/insta.png" alt="instagram"/></a>
-		                      	<a href="https://www.youtube.com/watch?v=mbW2JAMLH7g"><img style={{width:40+'px'}} src="img/youtube.png" alt="youtube"/></a>
+		                      	<a href="https://www.youtube.com/watch?v=MV0bL-jdVws"><img style={{width:40+'px'}} src="img/youtube.png" alt="youtube"/></a>
 		                      </div>
 		                    </div>
 						</div>
