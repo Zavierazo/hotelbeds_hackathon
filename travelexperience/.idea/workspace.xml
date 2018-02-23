@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7728964b-e3c1-4e30-bb02-4df51896f5b6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/choose-photo2.jpg" afterPath="$PROJECT_DIR$/public/img/choose-photo2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/last-phot16-large.jpg" afterPath="$PROJECT_DIR$/public/img/last-phot16-large.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/photo-album1.jpg" afterPath="$PROJECT_DIR$/public/img/photo-album1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/photo-album2.jpg" afterPath="$PROJECT_DIR$/public/img/photo-album2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/photo-album3.jpg" afterPath="$PROJECT_DIR$/public/img/photo-album3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/photo-album5.jpg" afterPath="$PROJECT_DIR$/public/img/photo-album5.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/photo-item2.jpg" afterPath="$PROJECT_DIR$/public/img/photo-item2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/photo-item3.jpg" afterPath="$PROJECT_DIR$/public/img/photo-item3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/Header.js" afterPath="$PROJECT_DIR$/imports/ui/Header.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/Main.js" afterPath="$PROJECT_DIR$/imports/ui/Main.js" />
-    </list>
+    <list default="true" id="7728964b-e3c1-4e30-bb02-4df51896f5b6" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +35,7 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="1358" />
     <option name="y" value="-8" />
     <option name="width" value="1456" />
@@ -190,7 +179,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1519335456853</updated>
-      <workItem from="1519335470642" duration="1245000" />
+      <workItem from="1519335470642" duration="1962000" />
     </task>
     <task id="LOCAL-00001" summary="first view">
       <created>1519335773280</created>
@@ -203,20 +192,20 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1245000" />
+    <option name="totallyTimeSpent" value="1962000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1456" height="916" extended-state="6" />
+    <frame x="1358" y="-8" width="1456" height="916" extended-state="7" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.77704483" sideWeight="0.61174786" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6622691" sideWeight="0.61174786" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.77704483" sideWeight="0.38825214" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6622691" sideWeight="0.38825214" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
