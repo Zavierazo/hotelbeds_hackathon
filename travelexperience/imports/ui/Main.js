@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
+import { FlowRouter } from 'meteor/kadira:flow-router';
 
 class Main extends Component {
+
+  exp(e) {
+    if (e) e.preventDefault();
+    FlowRouter.go('/experiencers');
+  }
 
   render() {
     let heartIcon  = '<use xlink:href="svg-icons/sprites/icons.svg#olymp-heart-icon"></use>'
@@ -207,7 +213,7 @@ class Main extends Component {
                     
                     
                     <div className="photo-album-item" data-mh="album-item">
-                      <div className="photo-item">
+                      <div className="photo-item" onClick={this.exp}>
                         <img src="img/photo-item2.jpg" alt="photo" />
                         <div className="overlay overlay-dark"></div>
                         <a href="#" className="more"><svg className="olymp-three-dots-icon" dangerouslySetInnerHTML={{__html: threeDots }} /></a>

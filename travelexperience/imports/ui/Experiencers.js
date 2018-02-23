@@ -1,7 +1,13 @@
 
 import React, { Component } from 'react';
+ import { FlowRouter } from 'meteor/kadira:flow-router';
 
 class Experiencers extends Component {
+
+	buy(e) {
+		if (e) e.preventDefault();
+		FlowRouter.go('/buy');
+	}
 
   render() {
   	let chat = '<use xlink:href="svg-icons/sprites/icons.svg#olymp-chat---messages-icon"></use>'
@@ -12,11 +18,9 @@ class Experiencers extends Component {
 				<div className="row">
 					<div className="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-6">
 						<div className="ui-block">
-							
-							<!-- Friend Item -->
-							<div className="friend-item">
+							<div className="friend-item" onClick={this.buy}>
 								<div className="friend-header-thumb">
-									<img src="img/friend1.jpg" alt="friend">
+									<img src="img/friend1.jpg" alt="friend" />
 								</div>
 							
 								<div className="friend-item-content">
@@ -37,7 +41,7 @@ class Experiencers extends Component {
 									</div>
 									<div className="friend-avatar">
 										<div className="author-thumb">
-											<img src="img/avatar1.jpg" alt="author">
+											<img src="img/avatar1.jpg" alt="author" />
 										</div>
 										<div className="author-content">
 											<a href="#" className="h5 author-name">Nicholas Grissom</a>
@@ -85,23 +89,22 @@ class Experiencers extends Component {
 												</div>
 											</div>
 										</div>
-							
-										<!-- If we need pagination -->
+
 										<div className="swiper-pagination"></div>
 									</div>
 								</div>
 							</div>
 							
-							<!-- ... end Friend Item -->			</div>
+									</div>
 					</div>
 					<div className="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-6">
 						<div className="ui-block">
 							
-							<!-- Friend Item -->
+							 
 							
 							<div className="friend-item">
 								<div className="friend-header-thumb">
-									<img src="img/friend2.jpg" alt="friend">
+									<img src="img/friend2.jpg" alt="friend" />
 								</div>
 							
 								<div className="friend-item-content">
@@ -122,7 +125,7 @@ class Experiencers extends Component {
 									</div>
 									<div className="friend-avatar">
 										<div className="author-thumb">
-											<img src="img/avatar2.jpg" alt="author">
+											<img src="img/avatar2.jpg" alt="author" />
 										</div>
 										<div className="author-content">
 											<a href="#" className="h5 author-name">Marina Valentine</a>
@@ -171,22 +174,22 @@ class Experiencers extends Component {
 											</div>
 										</div>
 							
-										<!-- If we need pagination -->
+										 
 										<div className="swiper-pagination"></div>
 									</div>
 								</div>
 							</div>
 							
-							<!-- ... end Friend Item -->			</div>
+							 			</div>
 					</div>
 					<div className="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-6">
 						<div className="ui-block">
 							
-							<!-- Friend Item -->
+							 
 							
 							<div className="friend-item">
 								<div className="friend-header-thumb">
-									<img src="img/friend3.jpg" alt="friend">
+									<img src="img/friend3.jpg" alt="friend" />
 								</div>
 							
 								<div className="friend-item-content">
@@ -207,7 +210,7 @@ class Experiencers extends Component {
 									</div>
 									<div className="friend-avatar">
 										<div className="author-thumb">
-											<img src="img/avatar3.jpg" alt="author">
+											<img src="img/avatar3.jpg" alt="author" />
 										</div>
 										<div className="author-content">
 											<a href="#" className="h5 author-name">Nicholas Grissom</a>
@@ -256,22 +259,22 @@ class Experiencers extends Component {
 											</div>
 										</div>
 							
-										<!-- If we need pagination -->
+										 
 										<div className="swiper-pagination"></div>
 									</div>
 								</div>
 							</div>
 							
-							<!-- ... end Friend Item -->			</div>
+							 			</div>
 					</div>
 					<div className="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-6">
 						<div className="ui-block">
 							
-							<!-- Friend Item -->
+							 
 							
 							<div className="friend-item">
 								<div className="friend-header-thumb">
-									<img src="img/friend4.jpg" alt="friend">
+									<img src="img/friend4.jpg" alt="friend" />
 								</div>
 							
 								<div className="friend-item-content">
@@ -292,7 +295,7 @@ class Experiencers extends Component {
 							
 									<div className="friend-avatar">
 										<div className="author-thumb">
-											<img src="img/avatar4.jpg" alt="author">
+											<img src="img/avatar4.jpg" alt="author" />
 										</div>
 										<div className="author-content">
 											<a href="#" className="h5 author-name">Chris Greyson</a>
@@ -341,23 +344,23 @@ class Experiencers extends Component {
 											</div>
 										</div>
 							
-										<!-- If we need pagination -->
+										 
 										<div className="swiper-pagination"></div>
 									</div>
 								</div>
 							</div>
 							
-							<!-- ... end Friend Item -->			</div>
+							 			</div>
 					</div>
 
 					<div className="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-6">
 						<div className="ui-block">
 							
-							<!-- Friend Item -->
+							 
 							
 							<div className="friend-item">
 								<div className="friend-header-thumb">
-									<img src="img/friend5.jpg" alt="friend">
+									<img src="img/friend5.jpg" alt="friend" />
 								</div>
 							
 								<div className="friend-item-content">
@@ -378,7 +381,7 @@ class Experiencers extends Component {
 									</div>
 									<div className="friend-avatar">
 										<div className="author-thumb">
-											<img src="img/avatar5.jpg" alt="author">
+											<img src="img/avatar5.jpg" alt="author" />
 										</div>
 										<div className="author-content">
 											<a href="#" className="h5 author-name">Elaine Dreifuss</a>
@@ -427,22 +430,22 @@ class Experiencers extends Component {
 											</div>
 										</div>
 							
-										<!-- If we need pagination -->
+										 
 										<div className="swiper-pagination"></div>
 									</div>
 								</div>
 							</div>
 							
-							<!-- ... end Friend Item -->			</div>
+							 			</div>
 					</div>
 					<div className="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-6">
 						<div className="ui-block">
 							
-							<!-- Friend Item -->
+							 
 							
 							<div className="friend-item">
 								<div className="friend-header-thumb">
-									<img src="img/friend6.jpg" alt="friend">
+									<img src="img/friend6.jpg" alt="friend" />
 								</div>
 							
 								<div className="friend-item-content">
@@ -463,7 +466,7 @@ class Experiencers extends Component {
 									</div>
 									<div className="friend-avatar">
 										<div className="author-thumb">
-											<img src="img/avatar6.jpg" alt="author">
+											<img src="img/avatar6.jpg" alt="author" />
 										</div>
 										<div className="author-content">
 											<a href="#" className="h5 author-name">Bruce Peterson</a>
@@ -512,22 +515,22 @@ class Experiencers extends Component {
 											</div>
 										</div>
 							
-										<!-- If we need pagination -->
+										 
 										<div className="swiper-pagination"></div>
 									</div>
 								</div>
 							</div>
 							
-							<!-- ... end Friend Item -->			</div>
+							 			</div>
 					</div>
 					<div className="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-6">
 						<div className="ui-block">
 							
-							<!-- Friend Item -->
+							 
 							
 							<div className="friend-item">
 								<div className="friend-header-thumb">
-									<img src="img/friend7.jpg" alt="friend">
+									<img src="img/friend7.jpg" alt="friend" />
 								</div>
 							
 								<div className="friend-item-content">
@@ -548,7 +551,7 @@ class Experiencers extends Component {
 									</div>
 									<div className="friend-avatar">
 										<div className="author-thumb">
-											<img src="img/avatar7.jpg" alt="author">
+											<img src="img/avatar7.jpg" alt="author" />
 										</div>
 										<div className="author-content">
 											<a href="#" className="h5 author-name">Carol Summers</a>
@@ -597,22 +600,22 @@ class Experiencers extends Component {
 											</div>
 										</div>
 							
-										<!-- If we need pagination -->
+										 
 										<div className="swiper-pagination"></div>
 									</div>
 								</div>
 							</div>
 							
-							<!-- ... end Friend Item -->			</div>
+							 			</div>
 					</div>
 					<div className="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-6">
 						<div className="ui-block">
 							
-							<!-- Friend Item -->
+							 
 							
 							<div className="friend-item">
 								<div className="friend-header-thumb">
-									<img src="img/friend8.jpg" alt="friend">
+									<img src="img/friend8.jpg" alt="friend" />
 								</div>
 							
 								<div className="friend-item-content">
@@ -633,7 +636,7 @@ class Experiencers extends Component {
 							
 									<div className="friend-avatar">
 										<div className="author-thumb">
-											<img src="img/avatar8.jpg" alt="author">
+											<img src="img/avatar8.jpg" alt="author" />
 										</div>
 										<div className="author-content">
 											<a href="#" className="h5 author-name">Michael Maximoff</a>
@@ -682,13 +685,13 @@ class Experiencers extends Component {
 											</div>
 										</div>
 							
-										<!-- If we need pagination -->
+										 
 										<div className="swiper-pagination"></div>
 									</div>
 								</div>
 							</div>
 							
-							<!-- ... end Friend Item -->			</div>
+							 			</div>
 					</div>
 				</div>
 			</div>;
