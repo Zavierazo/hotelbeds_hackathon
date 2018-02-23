@@ -12,7 +12,7 @@ class Experiencers extends Component {
 						{img: 'img/experiencers/thailand5.jpg', name: 'Jeremih Endir'}];
 
 		let images2 = [{img: 'img/experiencers/thailand2.jpg', name: 'Jay Alvarez'},
-						{img: 'img/experiencers/thailand_katy.png', name: 'KatytheChic'},
+						{img: 'img/experiencers/thailand_paula.png', name: 'Paula Gonu'},
 						{img: 'img/experiencers/thailand1.jpg', name: 'Luisito Comunica'}];
 
 		let images3 = [{img:'img/experiencers/thailand4.jpg',name: 'Alexis Olivar'},
@@ -99,7 +99,7 @@ class Experiencers extends Component {
 		                    <div className="content" style={{padding: 8+'px'}}>
 		                    	<div className="ui-block video-item">
 		                      <a href="#" className="h6 title">{imgObj.name}</a>
-		                      	<a href="https://www.instagram.com/wolfiecindy/?hl=es"><img style={{width:40+'px'}} src="img/insta.png" alt="instagram"/></a>
+		                      	<a href="https://www.instagram.com/tesschristinexo"><img style={{width:40+'px'}} src="img/insta.png" alt="instagram"/></a>
 		                      	<a href="https://www.youtube.com/watch?v=MV0bL-jdVws"><img style={{width:40+'px'}} src="img/youtube.png" alt="youtube"/></a>
 		                      </div>
 		                    </div>
