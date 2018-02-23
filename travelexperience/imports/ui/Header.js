@@ -13,7 +13,7 @@ class Header extends Component {
       <div className="ui-block">
         <div className="top-header">
           <div className="top-header-thumb">
-            <img src="img/top-header1.jpg" alt="nature" />
+            <img src="img/banner.png" alt="nature" />
           </div>
           <div className="profile-section">
 
