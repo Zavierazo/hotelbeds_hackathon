@@ -125,7 +125,7 @@ class Buy extends Component {
                             </div>
                             <h5 class="mb-0 title">
                                 <a data-toggle="collapse" data-parent="#accordion"
-                                   href={'#collapse'+day.day} aria-expanded="false"
+                                   href={'#collapse' + day.day} aria-expanded="false"
                                    aria-controls="collapseTwo-1" class="collapsed">
                                     {day.title}
                                     <svg class="svg-inline--fa fa-angle-down fa-w-10" aria-hidden="true"
@@ -140,7 +140,7 @@ class Buy extends Component {
                                 </a>
                             </h5>
                         </div>
-                        <div id={'collapse'+day.day} class="collapse" role="tabpanel"
+                        <div id={'collapse' + day.day} class="collapse" role="tabpanel"
                              aria-labelledby="headingTwo-1">
                             <div class="card-body">
                                 {day.description}
@@ -159,55 +159,7 @@ class Buy extends Component {
         let place = '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#olymp-add-a-place-icon"></use>'
         let mainView = <div className="container">
                 <div className="row">
-                    <div className="col-xl-8 order-xl-2 col-lg-8 order-lg-2 col-md-11 order-md-1 col-sm-11 col-xs-11">
-                        <div className="ui-block">
-                            <div className="ui-block-title">
-                                <h6 className="title">Personal Information</h6>
-                            </div>
-                            <div className="ui-block-content">
-                                <form>
-                                    <div className="row">
 
-                                        <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                            <div className="form-group label-floating">
-                                                <label className="control-label">First Name</label>
-                                                <input className="form-control" placeholder="Your first name" type="text"/>
-                                            </div>
-
-                                            <div className="form-group label-floating">
-                                                <label className="control-label">Your Email</label>
-                                                <input className="form-control" placeholder="Your email" type="email"/>
-                                            </div>
-
-                                        </div>
-
-                                        <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                            <div className="form-group label-floating">
-                                                <label className="control-label">Last Name</label>
-                                                <input className="form-control" placeholder="Your last name" type="text"/>
-                                            </div>
-                                            <div className="form-group label-floating">
-                                                <label className="control-label">Your Phone Number</label>
-                                                <input className="form-control" placeholder="" type="phone" value="+34"/>
-                                            </div>
-                                        </div>
-
-                                        <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                            <button className="btn btn-secondary btn-lg full-width">Pay with Credit Card
-                                            </button>
-                                        </div>
-                                        <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                            <button className="btn btn-primary btn-lg full-width">Pay with Crypto Coin
-                                            </button>
-                                        </div>
-
-                                    </div>
-                                </form>
-
-
-                            </div>
-                        </div>
-                    </div>
 
                     <div
                         className="col-xl-4 order-xl-1 col-lg-4 order-lg-1 col-md-12 order-md-2 col-sm-12 col-xs-12 responsive-display-none">
@@ -223,6 +175,54 @@ class Buy extends Component {
                                 </ol>
 
                             </div>
+                        </div>
+                    </div>
+                    <div
+                        className="col-xl-4 order-xl-1 col-lg-4 order-lg-1 col-md-12 order-md-2 col-sm-12 col-xs-12 responsive-display-none">
+                        <div className="ui-block">
+                            <div className="ui-block-title">
+                                <h6 className="title">Personal Information</h6>
+                            </div>
+                            <div className="ui-block-content">
+                                <form>
+                                    <div className="row">
+
+                                        <div className="form-group label-floating full-width">
+                                            <label className="control-label">First Name</label>
+                                            <input className="form-control" placeholder="Your first name" type="text"/>
+                                        </div>
+
+                                        <div className="form-group label-floating full-width">
+                                            <label className="control-label">Your Email</label>
+                                            <input className="form-control" placeholder="Your email" type="email"/>
+                                        </div>
+
+                                        <div className="form-group label-floating full-width">
+                                            <label className="control-label">Last Name</label>
+                                            <input className="form-control" placeholder="Your last name" type="text"/>
+                                        </div>
+
+                                        <div className="form-group label-floating full-width">
+                                            <label className="control-label">Your Phone Number</label>
+                                            <input className="form-control" placeholder="" type="phone" value="+34"/>
+                                        </div>
+
+                                        <button className="btn btn-secondary btn-lg full-width">Pay with Credit Card
+                                        </button>
+
+                                        <button className="btn btn-primary btn-lg full-width">Pay with Crypto Coin
+                                        </button>
+
+                                    </div>
+                                </form>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        className="col-xl-4 order-xl-1 col-lg-4 order-lg-1 col-md-12 order-md-2 col-sm-12 col-xs-12 responsive-display-none">
+                        <div className="ui-block">
 
                             <div className="your-profile">
                                 <div className="ui-block-title ui-block-title-small">
