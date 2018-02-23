@@ -32,9 +32,9 @@ FlowRouter.route('/experiencers', {
 
 FlowRouter.route('/buy', {
     name: 'Buy.show',
-    action() {
+    action(params, queryParams) {
         mountWithOpts(App, {
-            main: <Buy key="BuyView"/>,
+            main: <Buy key="BuyView" params={queryParams}/>,
         });
     },
 });

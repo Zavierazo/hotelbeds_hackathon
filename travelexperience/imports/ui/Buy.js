@@ -1,15 +1,16 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-
 class Buy extends Component {
     constructor(props) {
         super(props);
-        this.state = {hotel: undefined};
+        console.log(props);
+        this.state = {hotel: undefined, selected: ''};
         this.getHotel().then();
     }
 
     async getHotel() {
-        axios.get('http://10.175.56.57:8080/hotel/avail?hotelCode=15857&adults=2&childrens=0&checkIn=2018-03-25&checkOut=2018-03-30')
+        const url = 'http://10.175.56.57:8080/hotel/avail?hotelCode=15857&adults='+this.props.params.adults+'&childrens=0&checkIn='+this.props.params.checkin+'&checkOut='+this.props.params.checkout;
+        axios.get(url)
             .then(response => {
                 console.log(response);
                 this.setState({hotel: response.data});
@@ -18,12 +19,41 @@ class Buy extends Component {
 
     }
 
+    componentWillUpdate() {
+        if (this.state.hotel) {
+            for (var i = 0; i < this.state.hotel.length; i++) {
+                if (this.state.selected === null && this.state.hotel[i].cheaper) {
+                    this.setState({selected: this.state.hotel[i].rateKey});
+                    break;
+                }
+            }
+        }
+    }
+
+    change(e, rateKey) {
+        if (e) e.preventDefault();
+        if (rateKey !== this.state.selected) {
+            this.setState({selected: rateKey});
+        }
+    }
+
     renderHotels() {
         let hotels = null;
         if (this.state.hotel) {
             hotels = this.state.hotel.map((hotel) => (
                 <>
-                    <h6 key={hotel.index}>{hotel.room}</h6>
+                    <li id={hotel.rateKey} className="js-open-popup"
+                        style={{background: hotel.rateKey === this.state.selected ? '#dfdff1' : ''}}
+                        onClick={(e) => this.change(e, hotel.rateKey)}>
+                        <div className="composition">
+                            <a href="javascript:void(0)" className="composition-name">{hotel.room}</a>
+                            <a href="javascript:void(0)" className="composition-name">{hotel.board}</a>
+                            <a href="javascript:void(0)" className="composition-author">{hotel.cancellationPolicies}</a>
+                        </div>
+                        <div className="composition-time">
+                            <a className="published" style={{color: 'green'}}>{hotel.price} €</a>
+                        </div>
+                    </li>
                 </>
             ));
         }
@@ -36,14 +66,14 @@ class Buy extends Component {
             let hotel = this.state.hotel[0];
             html =
                 <>
+                    <div className="ui-block-title ui-block-title-small">
+                        <h6 className="title" style={{fontSize: 15 + 'px'}}>{hotel.hotelName}</h6>
+                    </div>
                     <div className="card" style={{
                         width: 90 + '%',
                         margin: 0 + ' auto'
                     }}>
                         <img className="card-img-top" src={hotel.image} alt={hotel.hotelName}/>
-                        <div className="card-body">
-                            <h5 className="card-title">{hotel.hotelName}</h5>
-                        </div>
                     </div>
                 </>;
         }
@@ -114,74 +144,13 @@ class Buy extends Component {
 
 
                         <div className="your-profile">
-                            <div className="ui-block-title ui-block-title-small">
-                                <h6 className="title">Hotel</h6>
-                            </div>
 
                             {this.renderHotel()}
 
-                            {this.renderHotels()}
-                            <div id="accordion" role="tablist" aria-multiselectable="true">
-                                <div className="card">
-                                    <div className="card-header" role="tab" id="headingOne">
-                                        <h6 className="mb-0">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
-                                               aria-expanded="true" aria-controls="collapseOne">
-                                                Profile Settings
-                                                <svg className="olymp-dropdown-arrow-icon"
-                                                     dangerouslySetInnerHTML={{__html: arrow}}/>
-                                            </a>
-                                        </h6>
-                                    </div>
+                            <ol class="widget w-playlist">
+                                {this.renderHotels()}
+                            </ol>
 
-                                    <div id="collapseOne" className="collapse show" role="tabpanel"
-                                         aria-labelledby="headingOne">
-                                        <ul className="your-profile-menu">
-                                            <li>
-                                                <a href="28-YourAccount-PersonalInformation.html">Personal
-                                                    Information</a>
-                                            </li>
-                                            <li>
-                                                <a href="29-YourAccount-AccountSettings.html">Account Settings</a>
-                                            </li>
-                                            <li>
-                                                <a href="30-YourAccount-ChangePassword.html">Change Password</a>
-                                            </li>
-                                            <li>
-                                                <a href="31-YourAccount-HobbiesAndInterests.html">Hobbies and
-                                                    Interests</a>
-                                            </li>
-                                            <li>
-                                                <a href="32-YourAccount-EducationAndEmployement.html">Education and
-                                                    Employement</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="ui-block-title">
-                                <a href="33-YourAccount-Notifications.html" className="h6 title">Notifications</a>
-                                <a href="#" className="items-round-little bg-primary">8</a>
-                            </div>
-                            <div className="ui-block-title">
-                                <a href="34-YourAccount-ChatMessages.html" className="h6 title">Chat / Messages</a>
-                            </div>
-                            <div className="ui-block-title">
-                                <a href="35-YourAccount-FriendsRequests.html" className="h6 title">Friend Requests</a>
-                                <a href="#" className="items-round-little bg-blue">4</a>
-                            </div>
-                            <div className="ui-block-title ui-block-title-small">
-                                <h6 className="title">FAVOURITE PAGE</h6>
-                            </div>
-                            <div className="ui-block-title">
-                                <a href="36-FavPage-SettingsAndCreatePopup.html" className="h6 title">Create Fav
-                                    Page</a>
-                            </div>
-                            <div className="ui-block-title">
-                                <a href="36-FavPage-SettingsAndCreatePopup.html" className="h6 title">Fav Page
-                                    Settings</a>
-                            </div>
                         </div>
 
 

@@ -53,11 +53,13 @@ public class HotelApiController {
     @Data
     @JsonInclude(value = JsonInclude.Include.NON_NULL)
     public static class AvailData {
+        private boolean cheaper;
         private Integer index;
         private String hotelName;
         private String image;
         private List<String> images;
         private String room;
+        private String board;
         private String cancellationPolicies;
         private BigDecimal price;
         private String rateKey;
@@ -121,17 +123,20 @@ public class HotelApiController {
                                             .map(imageDetail -> "http://photos.hotelbeds.com/giata/original/" + imageDetail.getPath()).collect(
                                                 Collectors.toList()));
                                         availData.setPrice(price);
-                                        availData.setRoom(room.getName() + " " + rate.getBoardName());
+                                        availData.setRoom(room.getName());
+                                        availData.setBoard(rate.getBoardName());
                                         String cancellationPolicies = "Free";
                                         if (rate.getCancellationPolicies() != null && !rate.getCancellationPolicies().isEmpty()) {
                                             CancellationPolicy cancellationPolicy = rate.getCancellationPolicies().get(0);
                                             LocalDateTime from =
                                                 LocalDateTime.parse(cancellationPolicy.getFrom(), DateTimeFormatter.ISO_OFFSET_DATE_TIME);
                                             if (from.isBefore(LocalDateTime.now())) {
-                                                cancellationPolicies = "Non Refundable " + cancellationPolicy.getAmount() + "€";
+                                                cancellationPolicies = "Cancellation " + cancellationPolicy.getAmount() + "€";
                                             } else {
                                                 cancellationPolicies =
-                                                    "Free since " + from + ". Then you have to pay " + cancellationPolicy.getAmount() + "€";
+                                                    "Cancellation FREE since " + from.toLocalDate() + ". Then "
+                                                        + cancellationPolicy.getAmount()
+                                                        + "€";
                                             }
                                         }
                                         availData.setCancellationPolicies(cancellationPolicies);
@@ -144,6 +149,15 @@ public class HotelApiController {
                         }
                     }
                 }
+            }
+            AvailData cheaper = null;
+            for (AvailData availData : avail) {
+                if (cheaper == null || cheaper.getPrice().compareTo(availData.getPrice()) > 0) {
+                    cheaper = availData;
+                }
+            }
+            if (cheaper != null) {
+                cheaper.setCheaper(true);
             }
         } catch (Exception e) {
             log.error("Error doing availability", e);
