@@ -1,7 +1,6 @@
 package com.hackathon.service;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.net.URISyntaxException;
@@ -45,8 +44,7 @@ public class GoogleVisionApiService {
 
     @PostConstruct
     public void postConstruct() throws GeneralSecurityException, IOException, URISyntaxException {
-        File file = new File(getClass().getClassLoader().getResource("google.json").toURI());
-        GoogleCredential credential = GoogleCredential.fromStream(new FileInputStream(file))
+        GoogleCredential credential = GoogleCredential.fromStream(getClass().getClassLoader().getResourceAsStream("google.json"))
             .createScoped(VisionScopes.all());
         JsonFactory jsonFactory = JacksonFactory.getDefaultInstance();
         vision = new Vision.Builder(GoogleNetHttpTransport.newTrustedTransport(), jsonFactory, credential)
