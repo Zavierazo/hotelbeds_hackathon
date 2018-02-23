@@ -51,6 +51,11 @@ public class ScheduleController {
     public ScheduleResponse list(
         @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate checkIn,
         @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate checkOut) {
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         ScheduleResponse response = new ScheduleResponse();
         response.setDay(checkIn.getDayOfMonth() + "-" + checkOut.getDayOfMonth());
         response.setMonth(checkIn.getMonth().getDisplayName(TextStyle.FULL, Locale.ENGLISH) + ", " + checkIn.getYear());
