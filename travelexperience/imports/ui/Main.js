@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
-import { FlowRouter } from 'meteor/kadira:flow-router';
 
 class Main extends Component {
-
-  exp(e) {
-    if (e) e.preventDefault();
-    FlowRouter.go('/experiencers');
-  }
 
   render() {
     let heartIcon  = '<use xlink:href="svg-icons/sprites/icons.svg#olymp-heart-icon"></use>'
@@ -213,7 +207,7 @@ class Main extends Component {
                     
                     
                     <div className="photo-album-item" data-mh="album-item">
-                      <div className="photo-item" onClick={this.exp}>
+                      <div className="photo-item">
                         <img src="img/photo-item2.jpg" alt="photo" />
                         <div className="overlay overlay-dark"></div>
                         <a href="#" className="more"><svg className="olymp-three-dots-icon" dangerouslySetInnerHTML={{__html: threeDots }} /></a>
@@ -225,7 +219,7 @@ class Main extends Component {
                       </div>
                     
                       <div className="content">
-                        <a href="#" className="title h5">South America Vacations</a>
+                        <a href="#" className="title h5">Surfing the Atlantic</a>
                         <span className="sub-title">Last Added: 2 hours ago</span>
                     
                         <div className="swiper-container">
@@ -302,7 +296,7 @@ class Main extends Component {
                       </div>
                     
                       <div className="content">
-                        <a href="#" className="title h5">South America Vacations</a>
+                        <a href="#" className="title h5">A white treasure</a>
                         <span className="sub-title">Last Added: 2 hours ago</span>
                     
                         <div className="swiper-container">
@@ -379,7 +373,7 @@ class Main extends Component {
                       </div>
                     
                       <div className="content">
-                        <a href="#" className="title h5">Photoshoot Summer 2016</a>
+                        <a href="#" className="title h5">No stress, neither noise</a>
                         <span className="sub-title">Last Added: 5 weeks ago</span>
                     
                         <div className="swiper-container" data-slide="fade">
@@ -456,7 +450,7 @@ class Main extends Component {
                       </div>
                     
                       <div className="content">
-                        <a href="#" className="title h5">Amazing Street Food</a>
+                        <a href="#" className="title h5">Caribbean Nap</a>
                         <span className="sub-title">Last Added: 6 mins ago</span>
                     
                         <div className="swiper-container" data-slide="fade">
@@ -512,7 +506,7 @@ class Main extends Component {
                       </div>
                     
                       <div className="content">
-                        <a href="#" className="title h5">Graffiti & Street Art</a>
+                        <a href="#" className="title h5">Balloon trips</a>
                         <span className="sub-title">Last Added: 16 hours ago</span>
                     
                         <div className="swiper-container" data-slide="fade">
