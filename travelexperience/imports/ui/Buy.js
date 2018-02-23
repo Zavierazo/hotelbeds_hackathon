@@ -1,14 +1,59 @@
 import React, { Component } from 'react';
 import { FlowRouter } from 'meteor/kadira:flow-router';
+import axios from 'axios';
 
 class Buy extends Component {
+  constructor(props) {
+       super(props);
+       this.state = {hotel: undefined};
+       this.getHotel().then();
+   }
+  async getHotel() {
+           axios.get('http://localhost:8080/hotel/avail?hotelCode=15857&adults=2&childrens=0&checkIn=2018-03-25&checkOut=2018-03-30')
+               .then(response => {
+                console.log(response);
+                this.setState({hotel: response.data});
+
+              });
+
+   }
+
+   renderHotels() {
+    let hotels = null;
+    if (this.state.hotel) {
+      hotels = this.state.hotel.map((hotel) => (
+        <>
+          <h6 key={hotel.index}>{hotel.room}</h6>
+        </>
+        ));
+    }
+    return hotels;
+   }
+    renderHotel() {
+    let html=null;
+    if (this.state.hotel) {
+      let hotel = this.state.hotel[0];
+      html= 
+      <>
+      <div className="card" style={{width: 90+'%',
+      margin: 0+' auto'}}>
+        <img className="card-img-top" src={hotel.image} alt={hotel.hotelName}/>
+        <div className="card-body">
+          <h5 className="card-title">{hotel.hotelName}</h5>
+        </div>
+      </div>
+      </>;
+    }
+    return html;
+  }
+
 
   render() {
      let threeDots = '<use xlink:href="svg-icons/sprites/icons.svg#olymp-three-dots-icon"></use>'
      let arrow ='<use  xlink:href="svg-icons/sprites/icons.svg#olymp-dropdown-arrow-icon"></use>'
     let mainView =       <div className="container">
   <div className="row">
-    <div className="col-xl-9 order-xl-2 col-lg-9 order-lg-2 col-md-12 order-md-1 col-sm-12 col-xs-12">
+    <div className="col-xl-8 order-xl-2 col-lg-8 order-lg-2 col-md-11 order-md-1 col-sm-11 col-xs-11">
       <div className="ui-block">
         <div className="ui-block-title">
           <h6 className="title">Personal Information</h6>
@@ -60,7 +105,7 @@ class Buy extends Component {
       </div>
     </div>
 
-    <div className="col-xl-3 order-xl-1 col-lg-3 order-lg-1 col-md-12 order-md-2 col-sm-12 col-xs-12 responsive-display-none">
+    <div className="col-xl-4 order-xl-1 col-lg-4 order-lg-1 col-md-12 order-md-2 col-sm-12 col-xs-12 responsive-display-none">
       <div className="ui-block">
 
         
@@ -69,6 +114,9 @@ class Buy extends Component {
             <h6 className="title">Hotel</h6>
           </div>
         
+          {this.renderHotel()}
+
+  {this.renderHotels()}
           <div id="accordion" role="tablist" aria-multiselectable="true">
             <div className="card">
               <div className="card-header" role="tab" id="headingOne">
