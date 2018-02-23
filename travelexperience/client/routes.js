@@ -8,7 +8,7 @@ import Main from '../imports/ui/Main';
 import Experiencers from '../imports/ui/Experiencers';
 import Buy from '../imports/ui/Buy';
 
-const mountWithOpts = withOptions({ rootId: 'render-main' }, mount);
+const mountWithOpts = withOptions({ rootId: 'root' }, mount);
 
 FlowRouter.route('/', {
     name: 'Main.show',
