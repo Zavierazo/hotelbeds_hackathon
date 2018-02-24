@@ -45,8 +45,8 @@ import lombok.extern.slf4j.Slf4j;
 @RequestMapping("/hotel")
 @Slf4j
 public class HotelApiController {
-    private static final String API_KEY = "d3624pymknffmdkppzsnsjpd";
-    private static final String SECRET = "RETs8Ydjvk";
+    private static final String API_KEY = "*****";
+    private static final String SECRET = "*****";
     private Map<String, AvailData> cache = new HashMap<>();
 
 
