@@ -13,7 +13,7 @@ import java.util.List;
 public class GooglePlacesApiService {
 
 
-    private static final GooglePlaces client = new GooglePlaces("AIzaSyCtg4zJSJE_7Z5GAonEDpCzcdSbAPxCkwk");
+    private static final GooglePlaces client = new GooglePlaces("******");
 
     public void test() {
         //BQ Apolo Hotel ChIJaxZDBaeWlxIRSuule-g8z1A
