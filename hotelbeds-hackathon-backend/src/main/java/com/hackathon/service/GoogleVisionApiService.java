@@ -36,7 +36,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class GoogleVisionApiService {
 
-    private static final String APPLICATION_NAME = "hotelbeds-hackat-1519164948420";
+    private static final String APPLICATION_NAME = "*******";
     private ExecutorService executorService = Executors.newFixedThreadPool(5);
     private Vision vision;
     @Autowired
