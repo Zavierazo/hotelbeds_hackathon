@@ -36,8 +36,8 @@ import lombok.extern.slf4j.Slf4j;
 @RequestMapping("/tab")
 @Slf4j
 public class TabController {
-    private static final String API_KEY = "ebqumrdzv6upzv6dsqsq5nt9";
-    private static final String SECRET = "gTD6ZAMYvK";
+    private static final String API_KEY = "*******";
+    private static final String SECRET = "******";
 
     private TabActivitiesClient tabActivitiesClient;
 
